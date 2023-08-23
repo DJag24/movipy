@@ -31,9 +31,4 @@ def handle_message(update, context):
         context.bot.send_video(chat_id=update.effective_chat.id, video=open('output_video.mp4', 'rb'))
 
 
-updater = Updater('6035704347:AAFe3bk_NeimNu6jKp6GFANMxbx2vAg68PY', use_context=True)
-dispatcher = updater.dispatcher
-dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
-
-updater.start_polling()
 
